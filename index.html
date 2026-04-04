@@ -571,11 +571,8 @@
       font-size: 0.83rem;
     }
     .results-table td:first-child { text-align: left; font-weight: 600; color: var(--gray-800); white-space: nowrap; }
-    .best { font-weight: 800; color: #065f46; background: #d1fae5; border-radius: 3px; padding: 0.1rem 0.3rem; }
-    .row-elevenlabs { background: #fffbeb !important; }
-    .row-elevenlabs:hover { background: #fef9c3 !important; }
-    .row-gemini { background: #f0fdf4 !important; }
-    .row-gemini:hover { background: #dcfce7 !important; }
+    .best { font-weight: 800; }
+    .second { text-decoration: underline; }
     .lang-pill {
       font-size: 0.65rem;
       font-weight: 700;
@@ -599,25 +596,6 @@
       font-size: 0.78rem;
       color: var(--gray-500);
     }
-    .legend-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 999px;
-      padding: 0.35rem 0.7rem;
-    }
-    .legend-swatch {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      flex-shrink: 0;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-    }
-    .legend-swatch-elevenlabs { background: #fffbeb; }
-    .legend-swatch-gemini { background: #f0fdf4; }
-    .legend-swatch-best { background: #d1fae5; }
 
     /* ── Citation ── */
     #citation { background: var(--white); }
@@ -889,9 +867,7 @@
     </div>
 
     <div class="results-legend">
-      <span class="legend-chip"><span class="legend-swatch legend-swatch-elevenlabs"></span> <strong>Yellow row:</strong> ElevenLabs &mdash; highlighted as the key commercial tag-based reference system</span>
-      <span class="legend-chip"><span class="legend-swatch legend-swatch-gemini"></span> <strong>Light-green row:</strong> Gemini family &mdash; highlighted as key commercial prompt-based reference systems</span>
-      <span class="legend-chip"><span class="legend-swatch legend-swatch-best"></span> <strong>Bold green cell:</strong> Best score in that metric column within the same system group and language</span>
+      <span style="font-size:0.82rem;color:var(--gray-500);">Within each language &amp; system-type block: <strong>bold</strong> = best &nbsp;|&nbsp; <u>underline</u> = second-best</span>
     </div>
 
     <!-- ── Objective Results ── -->
@@ -911,11 +887,11 @@
           <tbody>
             <tr><td>Parler-TTS Mini</td><td>6.25</td><td>3.48</td><td>4.03</td><td>3.20</td><td>0.34</td></tr>
             <tr><td>Parler-TTS Large</td><td>9.30</td><td>3.45</td><td>4.00</td><td>3.15</td><td>0.35</td></tr>
-            <tr><td>CapSpeech</td><td>4.56</td><td>3.46</td><td>3.96</td><td>3.16</td><td>0.40</td></tr>
-            <tr><td>Qwen3-TTS</td><td><span class="best">2.06</span></td><td><span class="best">3.56</span></td><td><span class="best">4.07</span></td><td><span class="best">3.30</span></td><td><span class="best">0.45</span></td></tr>
-            <tr><td>GPT-4o mini TTS</td><td>4.81</td><td>3.59</td><td>4.14</td><td>3.35</td><td>0.44</td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Flash</td><td>58.80</td><td>3.57</td><td>4.02</td><td>3.29</td><td>0.42</td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Pro</td><td>5.40</td><td>3.52</td><td>4.00</td><td>3.23</td><td>0.41</td></tr>
+            <tr><td>CapSpeech</td><td><u>4.56</u></td><td>3.46</td><td>3.96</td><td>3.16</td><td>0.40</td></tr>
+            <tr><td>Qwen3-TTS</td><td><span class="best">2.06</span></td><td><u>3.56</u></td><td><u>4.07</u></td><td><u>3.30</u></td><td><span class="best">0.45</span></td></tr>
+            <tr><td>GPT-4o mini TTS</td><td>4.81</td><td><span class="best">3.59</span></td><td><span class="best">4.14</span></td><td><span class="best">3.35</span></td><td><u>0.44</u></td></tr>
+            <tr><td>Gemini 2.5 Flash</td><td>58.80</td><td><u>3.57</u></td><td>4.02</td><td>3.29</td><td>0.42</td></tr>
+            <tr><td>Gemini 2.5 Pro</td><td><u>5.40</u></td><td>3.52</td><td>4.00</td><td>3.23</td><td>0.41</td></tr>
           </tbody>
         </table>
       </div>
@@ -933,9 +909,9 @@
           </tr></thead>
           <tbody>
             <tr><td>Qwen3-TTS</td><td><span class="best">4.08</span></td><td>3.50</td><td>3.98</td><td>3.19</td><td>0.39</td></tr>
-            <tr><td>GPT-4o mini TTS</td><td>4.67</td><td><span class="best">3.64</span></td><td><span class="best">4.16</span></td><td><span class="best">3.40</span></td><td><span class="best">0.43</span></td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Flash</td><td>16.45</td><td>3.57</td><td>3.97</td><td>3.25</td><td>0.41</td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Pro</td><td>7.68</td><td>3.55</td><td>4.01</td><td>3.26</td><td>0.42</td></tr>
+            <tr><td>GPT-4o mini TTS</td><td><u>4.67</u></td><td><span class="best">3.64</span></td><td><span class="best">4.16</span></td><td><span class="best">3.40</span></td><td><span class="best">0.43</span></td></tr>
+            <tr><td>Gemini 2.5 Flash</td><td>16.45</td><td><u>3.57</u></td><td>3.97</td><td>3.25</td><td><u>0.41</u></td></tr>
+            <tr><td>Gemini 2.5 Pro</td><td>7.68</td><td>3.55</td><td><u>4.01</u></td><td><u>3.26</u></td><td><u>0.42</u></td></tr>
           </tbody>
         </table>
       </div>
@@ -956,14 +932,14 @@
             <th>NTD&darr;</th>
           </tr></thead>
           <tbody>
-            <tr><td>Bark</td><td>14.73</td><td>3.00</td><td>3.08</td><td>2.52</td><td>0.11</td><td>0.614</td><td>0.700</td><td>0.654</td><td>0.0037</td></tr>
+            <tr><td>Bark</td><td>14.73</td><td>3.00</td><td>3.08</td><td>2.52</td><td>0.11</td><td>0.614</td><td>0.700</td><td>0.654</td><td><u>0.0037</u></td></tr>
             <tr><td>Higgs-Audio</td><td>9.41</td><td>3.55</td><td>3.96</td><td>3.23</td><td>0.09</td><td>0.360</td><td>0.407</td><td>0.382</td><td>0.0111</td></tr>
-            <tr><td>ChatTTS</td><td>5.58</td><td><span class="best">3.67</span></td><td>4.12</td><td><span class="best">3.42</span></td><td>0.02</td><td>0.652</td><td>0.680</td><td>0.664</td><td>0.0028</td></tr>
+            <tr><td>ChatTTS</td><td>5.58</td><td><span class="best">3.67</span></td><td><u>4.12</u></td><td><u>3.42</u></td><td>0.02</td><td><u>0.652</u></td><td>0.680</td><td><u>0.664</u></td><td><span class="best">0.0028</span></td></tr>
             <tr><td>Fish-Speech</td><td>5.65</td><td>3.55</td><td>4.06</td><td>3.28</td><td>0.16</td><td>0.447</td><td>0.418</td><td>0.432</td><td>0.0157</td></tr>
             <tr><td>Dia</td><td>21.95</td><td>2.94</td><td>2.71</td><td>2.27</td><td><span class="best">0.29</span></td><td>0.574</td><td>0.705</td><td>0.632</td><td>0.0052</td></tr>
-            <tr><td>CosyVoice 2</td><td><span class="best">3.82</span></td><td><span class="best">3.67</span></td><td><span class="best">4.19</span></td><td><span class="best">3.45</span></td><td>0.18</td><td>0.475</td><td>0.451</td><td>0.463</td><td>0.0159</td></tr>
-            <tr><td>Orpheus TTS</td><td>4.98</td><td>3.62</td><td>4.11</td><td>3.34</td><td>0.18</td><td><span class="best">0.687</span></td><td>0.774</td><td><span class="best">0.728</span></td><td><span class="best">0.0031</span></td></tr>
-            <tr class="row-elevenlabs"><td>ElevenLabs</td><td><span class="best">2.31</span></td><td>3.59</td><td>4.06</td><td>3.32</td><td>0.27</td><td>0.664</td><td><span class="best">0.787</span></td><td>0.720</td><td>0.0091</td></tr>
+            <tr><td>CosyVoice 2</td><td><u>3.82</u></td><td><span class="best">3.67</span></td><td><span class="best">4.19</span></td><td><span class="best">3.45</span></td><td>0.18</td><td>0.475</td><td>0.451</td><td>0.463</td><td>0.0159</td></tr>
+            <tr><td>Orpheus TTS</td><td>4.98</td><td><u>3.62</u></td><td>4.11</td><td>3.34</td><td>0.18</td><td><span class="best">0.687</span></td><td><u>0.774</u></td><td><span class="best">0.728</span></td><td>0.0031</td></tr>
+            <tr><td>ElevenLabs</td><td><span class="best">2.31</span></td><td>3.59</td><td>4.06</td><td>3.32</td><td><u>0.27</u></td><td>0.664</td><td><span class="best">0.787</span></td><td><u>0.720</u></td><td>0.0091</td></tr>
           </tbody>
         </table>
       </div>
@@ -984,13 +960,13 @@
             <th>NTD&darr;</th>
           </tr></thead>
           <tbody>
-            <tr><td>Bark</td><td>41.86</td><td>2.99</td><td>3.10</td><td>2.54</td><td>0.11</td><td>0.572</td><td>0.605</td><td>0.588</td><td>0.0141</td></tr>
-            <tr><td>Orpheus TTS</td><td>18.78</td><td>3.60</td><td>4.11</td><td>3.30</td><td>0.18</td><td>0.585</td><td>0.671</td><td>0.625</td><td>0.0159</td></tr>
+            <tr><td>Bark</td><td>41.86</td><td>2.99</td><td>3.10</td><td>2.54</td><td>0.11</td><td>0.572</td><td>0.605</td><td>0.588</td><td><span class="best">0.0141</span></td></tr>
+            <tr><td>Orpheus TTS</td><td>18.78</td><td><u>3.60</u></td><td><u>4.11</u></td><td><u>3.30</u></td><td><u>0.18</u></td><td>0.585</td><td>0.671</td><td>0.625</td><td><u>0.0159</u></td></tr>
             <tr><td>Higgs-Audio</td><td>5.98</td><td>3.52</td><td>3.91</td><td>3.17</td><td>0.09</td><td>0.429</td><td>0.369</td><td>0.396</td><td>0.0186</td></tr>
-            <tr><td>Fish-Speech</td><td>9.25</td><td>3.49</td><td>4.00</td><td>3.19</td><td>0.16</td><td>0.592</td><td>0.605</td><td>0.598</td><td>0.0397</td></tr>
-            <tr><td>ChatTTS</td><td>4.52</td><td>3.49</td><td>3.50</td><td>2.94</td><td>0.02</td><td><span class="best">0.644</span></td><td><span class="best">0.773</span></td><td><span class="best">0.703</span></td><td>0.0237</td></tr>
-            <tr><td>CosyVoice 2</td><td>6.27</td><td><span class="best">3.63</span></td><td><span class="best">4.17</span></td><td><span class="best">3.40</span></td><td>0.18</td><td>0.515</td><td>0.480</td><td>0.496</td><td>0.0383</td></tr>
-            <tr class="row-elevenlabs"><td>ElevenLabs</td><td><span class="best">4.13</span></td><td>3.61</td><td>4.03</td><td>3.32</td><td><span class="best">0.27</span></td><td>0.630</td><td>0.750</td><td>0.684</td><td><span class="best">0.0246</span></td></tr>
+            <tr><td>Fish-Speech</td><td>9.25</td><td>3.49</td><td>4.00</td><td>3.19</td><td>0.16</td><td><u>0.592</u></td><td>0.605</td><td><u>0.598</u></td><td>0.0397</td></tr>
+            <tr><td>ChatTTS</td><td><u>4.52</u></td><td>3.49</td><td>3.50</td><td>2.94</td><td>0.02</td><td><span class="best">0.644</span></td><td><span class="best">0.773</span></td><td><span class="best">0.703</span></td><td>0.0237</td></tr>
+            <tr><td>CosyVoice 2</td><td>6.27</td><td><span class="best">3.63</span></td><td><span class="best">4.17</span></td><td><span class="best">3.40</span></td><td><u>0.18</u></td><td>0.515</td><td>0.480</td><td>0.496</td><td>0.0383</td></tr>
+            <tr><td>ElevenLabs</td><td><span class="best">4.13</span></td><td>3.61</td><td>4.03</td><td><u>3.32</u></td><td><span class="best">0.27</span></td><td>0.630</td><td><u>0.750</u></td><td><u>0.684</u></td><td>0.0246</td></tr>
           </tbody>
         </table>
       </div>
@@ -1015,9 +991,9 @@
             <tr><td>Parler-TTS Mini</td><td>2.62</td><td>3.40</td><td>0.85</td><td>0.92</td></tr>
             <tr><td>CapSpeech</td><td>2.73</td><td>3.41</td><td>1.01</td><td>1.11</td></tr>
             <tr><td>GPT-4o mini</td><td>3.33</td><td>3.56</td><td>1.74</td><td>1.89</td></tr>
-            <tr><td>Qwen3-TTS</td><td>3.44</td><td>3.86</td><td>2.03</td><td>2.15</td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Flash</td><td>4.00</td><td>4.28</td><td>2.60</td><td>2.67</td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Pro</td><td><span class="best">4.07</span></td><td><span class="best">4.30</span></td><td><span class="best">2.68</span></td><td><span class="best">2.74</span></td></tr>
+            <tr><td>Qwen3-TTS</td><td>3.44</td><td><u>3.86</u></td><td>2.03</td><td>2.15</td></tr>
+            <tr><td>Gemini 2.5 Flash</td><td><u>4.00</u></td><td><u>4.28</u></td><td><u>2.60</u></td><td><u>2.67</u></td></tr>
+            <tr><td>Gemini 2.5 Pro</td><td><span class="best">4.07</span></td><td><span class="best">4.30</span></td><td><span class="best">2.68</span></td><td><span class="best">2.74</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1035,8 +1011,8 @@
           <tbody>
             <tr><td>GPT-4o mini</td><td>2.11</td><td>2.77</td><td>0.84</td><td>0.92</td></tr>
             <tr><td>Qwen3-TTS</td><td><span class="best">3.45</span></td><td><span class="best">3.93</span></td><td>2.01</td><td>1.98</td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Flash</td><td>3.04</td><td>3.71</td><td><span class="best">2.29</span></td><td><span class="best">2.42</span></td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Pro</td><td>3.38</td><td>3.75</td><td>2.07</td><td>2.11</td></tr>
+            <tr><td>Gemini 2.5 Flash</td><td>3.04</td><td>3.71</td><td><span class="best">2.29</span></td><td><span class="best">2.42</span></td></tr>
+            <tr><td>Gemini 2.5 Pro</td><td><u>3.38</u></td><td><u>3.75</u></td><td><u>2.07</u></td><td><u>2.11</u></td></tr>
           </tbody>
         </table>
       </div>
@@ -1058,8 +1034,8 @@
             <tr><td>Higgs-Audio</td><td>3.63</td><td>3.63</td><td>2.41</td><td>2.28</td></tr>
             <tr><td>CosyVoice 2</td><td>3.65</td><td>3.92</td><td>2.39</td><td>2.22</td></tr>
             <tr><td>ChatTTS</td><td>3.30</td><td>3.10</td><td>3.00</td><td>3.40</td></tr>
-            <tr><td>Orpheus TTS</td><td>4.01</td><td>4.11</td><td>3.31</td><td>3.71</td></tr>
-            <tr class="row-elevenlabs"><td>ElevenLabs</td><td><span class="best">4.60</span></td><td><span class="best">4.71</span></td><td><span class="best">3.92</span></td><td><span class="best">4.21</span></td></tr>
+            <tr><td>Orpheus TTS</td><td><u>4.01</u></td><td><u>4.11</u></td><td><u>3.31</u></td><td><u>3.71</u></td></tr>
+            <tr><td>ElevenLabs</td><td><span class="best">4.60</span></td><td><span class="best">4.71</span></td><td><span class="best">3.92</span></td><td><span class="best">4.21</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1079,13 +1055,13 @@
             <tr><td>Fish-Speech</td><td>2.71</td><td>3.09</td><td>0.10</td><td>0.13</td></tr>
             <tr><td>Orpheus TTS</td><td>3.20</td><td>3.29</td><td>2.05</td><td>2.17</td></tr>
             <tr><td>Higgs-Audio</td><td>3.48</td><td>3.68</td><td>1.38</td><td>1.18</td></tr>
-            <tr><td>CosyVoice 2</td><td>3.76</td><td><span class="best">4.35</span></td><td>1.56</td><td>1.65</td></tr>
-            <tr><td>ChatTTS</td><td>3.53</td><td>3.13</td><td>2.13</td><td>2.23</td></tr>
-            <tr class="row-elevenlabs"><td>ElevenLabs</td><td><span class="best">4.09</span></td><td>4.31</td><td><span class="best">3.38</span></td><td><span class="best">3.41</span></td></tr>
+            <tr><td>CosyVoice 2</td><td><u>3.76</u></td><td><span class="best">4.35</span></td><td>1.56</td><td>1.65</td></tr>
+            <tr><td>ChatTTS</td><td>3.53</td><td>3.13</td><td><u>2.13</u></td><td><u>2.23</u></td></tr>
+            <tr><td>ElevenLabs</td><td><span class="best">4.09</span></td><td><u>4.31</u></td><td><span class="best">3.38</span></td><td><span class="best">3.41</span></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="metric-note">NVV PE: NVV Perceptal Effect. NVV IF: NVV Instruction Following. All scores are on a 5-point scale.</p>
+      <p class="metric-note">NVV PE: NVV Perceptual Effect. NVV IF: NVV Instruction Following. All scores are on a 5-point scale.</p>
     </div>
 
     <!-- ── LLM-based Results ── -->
@@ -1105,10 +1081,10 @@
             <tr><td>Parler-TTS Mini</td><td>1.65</td><td>3.30</td><td>0.23</td><td>0.30</td></tr>
             <tr><td>Parler-TTS Large</td><td>1.67</td><td>3.13</td><td>0.30</td><td>0.38</td></tr>
             <tr><td>CapSpeech</td><td>1.88</td><td>3.52</td><td>0.48</td><td>0.57</td></tr>
-            <tr><td>GPT-4o mini</td><td>3.16</td><td>3.93</td><td>1.73</td><td>1.65</td></tr>
+            <tr><td>GPT-4o mini</td><td>3.16</td><td><u>3.93</u></td><td>1.73</td><td>1.65</td></tr>
             <tr><td>Qwen3-TTS</td><td>3.17</td><td><span class="best">3.96</span></td><td>2.16</td><td>1.98</td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Flash</td><td><span class="best">3.30</span></td><td>3.80</td><td><span class="best">2.84</span></td><td><span class="best">2.78</span></td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Pro</td><td>3.20</td><td>3.65</td><td>2.54</td><td>2.64</td></tr>
+            <tr><td>Gemini 2.5 Flash</td><td><span class="best">3.30</span></td><td>3.80</td><td><span class="best">2.84</span></td><td><span class="best">2.78</span></td></tr>
+            <tr><td>Gemini 2.5 Pro</td><td><u>3.20</u></td><td>3.65</td><td><u>2.54</u></td><td><u>2.64</u></td></tr>
           </tbody>
         </table>
       </div>
@@ -1125,9 +1101,9 @@
           </tr></thead>
           <tbody>
             <tr><td>GPT-4o mini</td><td>2.50</td><td>3.85</td><td>0.92</td><td>1.04</td></tr>
-            <tr><td>Qwen3-TTS</td><td>3.23</td><td><span class="best">3.88</span></td><td>2.10</td><td>1.99</td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Flash</td><td><span class="best">3.27</span></td><td>3.90</td><td><span class="best">3.06</span></td><td><span class="best">3.12</span></td></tr>
-            <tr class="row-gemini"><td>Gemini 2.5 Pro</td><td>3.11</td><td>3.73</td><td>2.54</td><td>2.71</td></tr>
+            <tr><td>Qwen3-TTS</td><td><u>3.23</u></td><td><u>3.88</u></td><td>2.10</td><td>1.99</td></tr>
+            <tr><td>Gemini 2.5 Flash</td><td><span class="best">3.27</span></td><td><span class="best">3.90</span></td><td><span class="best">3.06</span></td><td><span class="best">3.12</span></td></tr>
+            <tr><td>Gemini 2.5 Pro</td><td>3.11</td><td>3.73</td><td><u>2.54</u></td><td><u>2.71</u></td></tr>
           </tbody>
         </table>
       </div>
@@ -1149,8 +1125,8 @@
             <tr><td>CosyVoice 2</td><td>2.46</td><td>3.72</td><td>1.41</td><td>1.80</td></tr>
             <tr><td>ChatTTS</td><td>2.88</td><td>3.31</td><td>3.00</td><td>3.88</td></tr>
             <tr><td>Higgs-Audio</td><td>2.77</td><td>3.50</td><td>1.90</td><td>2.15</td></tr>
-            <tr><td>Orpheus TTS</td><td>3.68</td><td>3.76</td><td>4.03</td><td>3.97</td></tr>
-            <tr class="row-elevenlabs"><td>ElevenLabs</td><td><span class="best">3.92</span></td><td><span class="best">4.21</span></td><td><span class="best">4.33</span></td><td><span class="best">4.58</span></td></tr>
+            <tr><td>Orpheus TTS</td><td><u>3.68</u></td><td><u>3.76</u></td><td><u>4.03</u></td><td><u>3.97</u></td></tr>
+            <tr><td>ElevenLabs</td><td><span class="best">3.92</span></td><td><span class="best">4.21</span></td><td><span class="best">4.33</span></td><td><span class="best">4.58</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1169,10 +1145,10 @@
             <tr><td>Bark</td><td>1.44</td><td>1.84</td><td>1.28</td><td>2.25</td></tr>
             <tr><td>Fish-Speech</td><td>2.65</td><td>3.83</td><td>1.29</td><td>1.58</td></tr>
             <tr><td>Orpheus TTS</td><td>2.81</td><td>3.48</td><td>2.74</td><td>3.09</td></tr>
-            <tr><td>CosyVoice 2</td><td>3.37</td><td>3.84</td><td>1.98</td><td>1.75</td></tr>
-            <tr><td>Higgs-Audio</td><td>3.10</td><td>3.37</td><td>2.79</td><td>3.24</td></tr>
+            <tr><td>CosyVoice 2</td><td><u>3.37</u></td><td><u>3.84</u></td><td>1.98</td><td>1.75</td></tr>
+            <tr><td>Higgs-Audio</td><td>3.10</td><td>3.37</td><td><u>2.79</u></td><td><u>3.24</u></td></tr>
             <tr><td>ChatTTS</td><td>2.69</td><td>2.75</td><td>1.94</td><td>2.88</td></tr>
-            <tr class="row-elevenlabs"><td>ElevenLabs</td><td><span class="best">4.09</span></td><td><span class="best">4.09</span></td><td><span class="best">3.74</span></td><td><span class="best">3.77</span></td></tr>
+            <tr><td>ElevenLabs</td><td><span class="best">4.09</span></td><td><span class="best">4.09</span></td><td><span class="best">3.74</span></td><td><span class="best">3.77</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1185,202 +1161,67 @@
 <!-- ── Figure 2: NVV PE Heatmap ──────────────────────────────────────────── -->
 <section id="heatmap">
   <div class="container">
-    <h2 class="section-title">NVV Perceptual Effect by Type </h2>
+    <h2 class="section-title">NVV Perceptual Effect by Type</h2>
     <div class="divider"></div>
     <p class="section-subtitle">
-      LLM-based NVV Perceptual Effect (PE) scores per system &times; NVV type (0&ndash;5 scale).
-      Systems are ordered by subjective mean PE (consistent with paper Figure 2).
-      Gray cells = unsupported type. <strong>Bold</strong> = best in column; <u>underline</u> = 2nd best.
+      Per-type NVV Perceptual Effect (PE) (0&ndash;5 scale) derived from subjective evaluation.
+      <strong>Top panel:</strong> tag-based systems sorted by mean PE.
+      <strong>Bottom panel:</strong> prompt-based systems. White cells = NVV type not supported.
     </p>
 
-    <div class="heatmap-controls">
-      <div class="heatmap-toggle-group">
-        <button class="heatmap-btn active" data-lang="en">English</button>
-        <button class="heatmap-btn" data-lang="zh">Chinese</button>
+    <!-- Key findings from Section 4.5 -->
+    <!-- <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; margin-bottom:1.75rem;">
+      <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:var(--radius-lg); padding:1rem 1.25rem;">
+        <div style="font-size:0.8rem; font-weight:700; color:#0369a1; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.4rem;">Coverage Gap</div>
+        <p style="font-size:0.875rem; color:#1e3a5f; margin:0; line-height:1.55;">
+          Tag-based panels are sparse: systems typically support only 1&ndash;13 of the 45 NVV types (Coverage &asymp;0.02&ndash;0.29). Prompt-based panels are dense because captions can target all types.
+        </p>
       </div>
-      <div class="heatmap-toggle-group">
-        <button class="heatmap-btn active" data-mode="tag">Tag-based</button>
-        <button class="heatmap-btn" data-mode="prompt">Prompt-based</button>
+      <div style="background:#fefce8; border:1px solid #fde68a; border-radius:var(--radius-lg); padding:1rem 1.25rem;">
+        <div style="font-size:0.8rem; font-weight:700; color:#92400e; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.4rem;">Type Difficulty</div>
+        <p style="font-size:0.875rem; color:#451a03; margin:0; line-height:1.55;">
+          High-salience events (laughter, breath, cough, sigh, gasp) achieve higher PE. The hardest types are low-SNR oral cues (<em>tsk, sss, lipsmack, gulps</em>) and long-duration affect (<em>crying, sobbing, wail</em>).
+        </p>
       </div>
+      <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:var(--radius-lg); padding:1rem 1.25rem;">
+        <div style="font-size:0.8rem; font-weight:700; color:#166534; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.4rem;">System Differences</div>
+        <p style="font-size:0.875rem; color:#14532d; margin:0; line-height:1.55;">
+          ElevenLabs leads tag-based systems with broad coverage and consistently strong PE. Gemini 2.5 Pro / Flash form the top prompt-based tier. Qwen3-TTS is competitive but drops on subtle cues.
+        </p>
+      </div>
+    </div> -->
+
+    <div style="display:flex; gap:0; border:1px solid #d1d5db; border-radius:6px; overflow:hidden; margin-bottom:1.25rem; width:fit-content;">
+      <button id="hm-btn-en" onclick="showHeatmap('en')"
+        style="padding:0.4rem 1.1rem; font-size:0.85rem; border:none; background:#1d4ed8; color:#fff; font-weight:600; cursor:pointer;">
+        English
+      </button>
+      <button id="hm-btn-zh" onclick="showHeatmap('zh')"
+        style="padding:0.4rem 1.1rem; font-size:0.85rem; border:none; background:#f9fafb; color:#374151; font-weight:500; cursor:pointer; transition:background 0.15s;">
+        Chinese
+      </button>
     </div>
 
-    <div class="heatmap-legend-bar">
-      <span class="heatmap-legend-label">0</span>
-      <div class="heatmap-gradient-bar"></div>
-      <span class="heatmap-legend-label">5</span>
-      <span style="margin-left:1.5rem;color:#6b7280;font-size:0.8rem;">&#9632; unsupported &nbsp;&nbsp; <strong>bold</strong> = best &nbsp;&nbsp; <u>underline</u> = 2nd best</span>
+    <div id="hm-en" style="width:70%;">
+      <img src="figs/heatmap_EN-1.png" alt="English NVV Perceptual Effect heatmap (tag-based top, prompt-based bottom)"
+           style="width:100%; border-radius:var(--radius-lg); border:1px solid var(--gray-200); display:block;" />
     </div>
-
-    <div id="heatmap-container" style="overflow-x:auto; margin-top:0.5rem;"></div>
+    <div id="hm-zh" style="width:70%; display:none;">
+      <img src="figs/heatmap_ZH-1.png" alt="Chinese NVV Perceptual Effect heatmap (tag-based top, prompt-based bottom)"
+           style="width:100%; border-radius:var(--radius-lg); border:1px solid var(--gray-200); display:block;" />
+    </div>
   </div>
 </section>
 
-<style>
-.heatmap-controls { display:flex; gap:1.5rem; margin-bottom:1rem; flex-wrap:wrap; }
-.heatmap-toggle-group { display:flex; gap:0; border:1px solid #d1d5db; border-radius:6px; overflow:hidden; }
-.heatmap-btn {
-  padding:0.35rem 0.9rem; font-size:0.85rem; border:none; background:#f9fafb;
-  cursor:pointer; color:#374151; transition:background 0.15s;
-}
-.heatmap-btn.active { background:#1d4ed8; color:#fff; font-weight:600; }
-.heatmap-btn:not(.active):hover { background:#e5e7eb; }
-.heatmap-legend-bar { display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem; }
-.heatmap-legend-label { font-size:0.78rem; color:#374151; font-weight:600; }
-.heatmap-gradient-bar {
-  width:160px; height:12px; border-radius:4px;
-  background: linear-gradient(to right, #fff 0%, #a7f3d0 40%, #065f46 100%);
-  border:1px solid #d1d5db;
-}
-.heatmap-wrap { display:inline-block; }
-.heatmap-type-headers { display:flex; }
-.heatmap-sys-col { width:130px; min-width:130px; flex-shrink:0; }
-.heatmap-type-col { text-align:center; font-size:0; line-height:0; }
-.heatmap-type-label-wrap { display:flex; }
-.heatmap-type-label {
-  writing-mode:vertical-rl; text-orientation:mixed; transform:rotate(180deg);
-  font-size:0.68rem; color:#374151; height:70px; display:flex; align-items:center;
-  justify-content:center; white-space:nowrap; padding:0 1px;
-}
-.heatmap-row { display:flex; align-items:center; margin-bottom:1px; }
-.heatmap-sys-name {
-  width:130px; min-width:130px; font-size:0.78rem; color:#1f2937; text-align:right;
-  padding-right:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-  line-height:18px;
-}
-.heatmap-cell {
-  width:28px; height:20px; position:relative; cursor:default;
-  border-right:1px solid rgba(0,0,0,0.06);
-  display:flex; align-items:center; justify-content:center; overflow:hidden;
-}
-.heatmap-cell:hover::after {
-  content: attr(data-tip);
-  position:absolute; bottom:24px; left:50%; transform:translateX(-50%);
-  background:#1f2937; color:#fff; padding:2px 6px; border-radius:4px;
-  font-size:0.7rem; white-space:nowrap; z-index:100; pointer-events:none;
-}
-.heatmap-cat-sep { border-left:2px solid #9ca3af !important; }
-.heatmap-cat-header-row { display:flex; margin-bottom:2px; }
-.heatmap-cat-header {
-  font-size:0.65rem; color:#6b7280; text-align:center; font-weight:600;
-  border-bottom:1px solid #d1d5db; padding-bottom:2px; overflow:hidden;
-  white-space:nowrap; text-overflow:ellipsis;
-}
-</style>
-
 <script>
-(function(){
-  const ALL_TYPES = [
-    'breath','inhale','exhale','quick_breath','sigh','gasp','panting','wheeze','snore','yawn',
-    'cough','sneeze','clears_throat','hiccup','sniff','sniffle','snort',
-    'chuckle','giggle','laugh','laughs_harder','starts_laughing','stifled_laugh','bursts_of_laughter',
-    'crying','sobbing','crying_loudly','wail','whimper',
-    'hum','humming','groan','moan','grunt','mumble','ah','oh','hmm',
-    'lipsmack','gulp','swallow','burps','tsk','sss','clucking','hiss','whispers'
-  ];
-  const CAT_SPANS = [
-    {label:'Respiratory', start:0, end:9},
-    {label:'Throat', start:10, end:16},
-    {label:'Laughter', start:17, end:23},
-    {label:'Crying', start:24, end:28},
-    {label:'Emotional', start:29, end:37},
-    {label:'Oral / Misc', start:38, end:46},
-  ];
-
-  const FIG2_DATA = {"en-tag": {"systems": ["ElevenLabs", "Orpheus TTS", "ChatTTS", "Dia", "Higgs-Audio", "CosyVoice 2", "Bark", "Fish-Speech"], "matrix": {"ElevenLabs": [null, null, 5.0, null, 4.7, null, null, 3.5, null, null, null, null, null, null, null, null, 4.4, null, 3.9, 4.2, 3.7, 3.5, null, null, 4.5, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 4.7, 5.0, null, null, null, null, null, 4.9], "Orpheus TTS": [null, null, null, null, 4.9, 3.7, null, null, null, 4.6, 3.3, null, null, null, null, 4.2, null, 4.3, null, 3.1, null, null, null, null, null, null, null, null, null, null, null, 4.8, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "ChatTTS": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 4.0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "Dia": [null, 3.7, 3.2, null, 3.8, 4.6, null, null, null, null, 3.4, 2.9, 4.4, null, 3.3, null, null, 2.4, null, 3.2, null, null, null, null, null, null, null, null, null, null, 2.0, 3.4, null, null, null, null, null, null, null, null, null, 2.9, null, null, null, null, null], "Higgs-Audio": [null, null, null, null, null, null, null, null, null, null, 3.8, null, null, null, null, null, null, null, null, 3.5, null, null, null, null, null, null, null, null, null, null, 4.2, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "CosyVoice 2": [4.5, null, null, 3.2, 4.2, null, null, null, null, null, 4.2, null, null, null, null, null, null, null, null, null, null, null, null, 2.9, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 3.8, null, null, null, null, null, 4.6, 4.5, null], "Bark": [null, null, null, null, 3.7, 3.4, null, null, null, null, null, null, 2.4, null, null, null, null, null, null, 3.2, null, null, null, 3.22, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "Fish-Speech": [null, null, null, null, 4.0, null, 4.3, null, null, null, null, null, null, null, null, null, null, 3.5, null, 2.5, null, null, null, null, null, 3.6, 2.1, null, null, null, null, 4.3, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]}}, "en-prompt": {"systems": ["Gemini 2.5 Flash", "Gemini 2.5 Pro", "GPT-4o mini TTS", "CapSpeech", "Parler-TTS Large", "Parler-TTS Mini"], "matrix": {"Gemini 2.5 Flash": [5.0, 5.0, 4.1, 5.0, 4.6, 5.0, 4.7, 4.9, 3.3, 4.7, 4.3, 3.3, 4.8, 4.3, 4.5, 4.5, 4.8, 4.1, 2.7, 3.9, 4.1, 3.8, 4.3, 3.7, 4.7, 4.8, 3.6, 4.7, 4.8, 4.7, 1.9, 5.0, 5.0, 4.9, 3.8, 4.7, 4.0, 3.6, 3.6, 5.0, 4.3, 4.5, 4.8, 4.1, 4.8, 3.9, 5.0], "Gemini 2.5 Pro": [5.0, 5.0, 4.7, 4.8, 5.0, 4.5, 4.8, 5.0, 3.3, 4.6, 4.3, 3.5, 4.5, 4.4, 4.0, 5.0, 4.8, 3.3, 4.4, 4.0, 4.0, 4.6, 4.5, 3.0, 3.7, 4.0, 3.5, 4.0, 4.2, 4.9, 2.8, 4.8, 4.5, 5.0, 4.7, 5.0, 5.0, 4.5, 4.1, 4.2, 4.5, 3.9, 5.0, 5.0, 4.0, 4.3, 5.0], "GPT-4o mini TTS": [5.0, 5.0, 4.9, 5.0, 5.0, 4.9, 4.4, 4.8, 3.6, 4.7, 4.3, 3.6, 3.5, 4.0, 4.8, 4.8, 4.6, 3.3, 3.8, 4.0, 4.0, 4.4, 3.6, 3.8, 4.4, 4.2, 4.1, 4.1, 4.8, 4.9, 3.2, 4.8, 4.8, 5.0, 5.0, 5.0, 4.4, 4.5, 4.3, 4.5, 4.4, 4.6, 5.0, 4.7, 4.7, 4.7, 5.0], "CapSpeech": [4.6, 4.5, 4.8, 4.2, 4.8, 4.0, 3.8, 4.0, 3.5, 2.9, 4.3, 2.6, 4.1, 3.2, 2.8, 4.4, 2.9, 2.2, 2.4, 3.0, 3.1, 2.6, 2.9, 1.4, 2.9, 3.3, 3.7, 4.0, 4.1, 3.4, 1.0, 4.3, 4.5, 4.1, 4.5, 4.4, 3.3, 4.7, 2.5, 4.3, 4.6, 3.0, 4.3, 4.3, 3.5, 4.7, 3.5], "Parler-TTS Large": [4.9, 4.9, 3.0, 4.5, 4.0, 4.1, 3.4, 3.9, 2.0, 4.0, 3.7, 3.0, 4.1, 4.0, 3.6, 4.3, 3.1, 2.3, 3.0, 1.5, 2.2, 2.7, 3.2, 0.9, 4.0, 4.3, 3.4, 3.9, 4.1, 4.7, 1.0, 3.5, 5.0, 4.7, 3.7, 4.2, 3.1, 4.2, 3.3, 3.3, 4.1, 2.6, 4.8, 4.5, 3.9, 4.3, 5.0], "Parler-TTS Mini": [4.9, 4.3, 5.0, 3.8, 4.4, 3.6, 3.9, 4.1, 3.0, 2.9, 4.3, 2.1, 4.0, 3.1, 3.0, 4.5, 4.7, 2.9, 3.1, 1.7, 2.2, 3.3, 3.6, 1.7, 3.5, 3.4, 2.9, 3.8, 4.5, 5.0, 1.3, 4.1, 4.9, 4.3, 4.5, 3.0, 4.8, 4.9, 4.4, 4.0, 4.6, 3.7, 4.9, 3.1, 3.6, 4.5, 5.0]}}, "zh-tag": {"systems": ["ElevenLabs", "ChatTTS", "Orpheus TTS", "CosyVoice 2", "Higgs-Audio", "Bark", "Fish-Speech"], "matrix": {"ElevenLabs": [null, null, 5.0, null, 5.0, null, null, 4.6, null, null, null, null, null, null, null, null, 5.0, null, 4.3, 4.1, 4.0, 4.5, null, null, 4.5, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 3.7, 3.9, null, null, null, null, null, 4.5], "ChatTTS": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 4.22, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "Orpheus TTS": [null, null, null, null, 4.5, 3.7, null, null, null, 4.3, 3.4, null, null, null, null, 4.7, null, 3.89, null, 4.6, null, null, null, null, null, null, null, null, null, null, null, 4.8, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "CosyVoice 2": [4.0, null, null, 5.0, 4.1, null, null, null, null, null, 3.5, null, null, null, null, null, null, null, null, null, null, null, null, 3.8, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 4.3, null, null, null, null, null, 3.8, 4.6, null], "Higgs-Audio": [null, null, null, null, null, null, null, null, null, null, 3.7, null, null, null, null, null, null, null, null, 4.1, null, null, null, null, null, null, null, null, null, null, 3.0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "Bark": [null, null, null, null, 4.6, 4.2, null, null, null, null, null, null, 4.0, null, null, null, null, null, null, 2.5, null, null, null, 1.6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "Fish-Speech": [null, null, null, null, 5.0, null, 4.9, null, null, null, null, null, null, null, null, null, null, 4.5, null, 4.6, null, null, null, null, null, 4.5, 3.7, null, null, null, null, 3.9, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]}}, "zh-prompt": {"systems": ["Gemini 2.5 Flash", "Gemini 2.5 Pro", "GPT-4o mini TTS"], "matrix": {"Gemini 2.5 Flash": [5.0, 5.0, 4.8, 5.0, 4.4, 5.0, 5.0, 5.0, 4.6, 4.9, 3.9, 3.7, 4.7, 4.6, 4.9, 5.0, 5.0, 4.4, 4.5, 4.8, 4.4, 4.5, 4.3, 4.6, 5.0, 5.0, 5.0, 5.0, 4.6, 5.0, 4.9, 5.0, 5.0, 5.0, 5.0, 5.0, 4.8, 4.9, 4.8, 5.0, 4.9, 3.8, 5.0, 5.0, 5.0, 5.0, 5.0], "Gemini 2.5 Pro": [5.0, 5.0, 5.0, 5.0, 4.9, 5.0, 5.0, 4.8, 4.7, 4.9, 4.6, 4.3, 4.8, 4.7, 5.0, 4.7, 4.8, 4.2, 4.4, 4.5, 4.9, 4.6, 4.6, 4.7, 5.0, 4.6, 4.8, 4.6, 4.8, 4.8, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.9, 5.0, 4.8, 4.5, 5.0, 5.0, 4.6, 4.3, 5.0], "GPT-4o mini TTS": [5.0, 5.0, 5.0, 5.0, 4.6, 5.0, 5.0, 4.5, 4.7, 4.9, 4.8, 4.0, 5.0, 3.8, 4.5, 5.0, 5.0, 4.7, 3.4, 4.3, 5.0, 4.6, 4.5, 4.3, 5.0, 4.8, 4.3, 4.3, 5.0, 5.0, 4.6, 5.0, 5.0, 4.9, 5.0, 4.8, 5.0, 5.0, 4.5, 4.9, 4.9, 5.0, 5.0, 5.0, 4.7, 5.0, 5.0]}}};
-
-  function peToColor(v) {
-    if (v === null) return '#e9eaec';
-    const t = Math.max(0, Math.min(1, v / 5));
-    // white(255,255,255) → mint(167,243,208) → dark-green(6,95,70)
-    let r, g, b;
-    if (t < 0.5) {
-      const u = t * 2;
-      r = Math.round(255 + (167 - 255) * u);
-      g = Math.round(255 + (243 - 255) * u);
-      b = Math.round(255 + (208 - 255) * u);
-    } else {
-      const u = (t - 0.5) * 2;
-      r = Math.round(167 + (6 - 167) * u);
-      g = Math.round(243 + (95 - 243) * u);
-      b = Math.round(208 + (70 - 208) * u);
-    }
-    return `rgb(${r},${g},${b})`;
-  }
-
-  function renderHeatmap(lang, mode) {
-    const key = `${lang}-${mode}`;
-    const data = FIG2_DATA[key];
-    const container = document.getElementById('heatmap-container');
-    if (!data) { container.innerHTML = '<p style="color:#6b7280;padding:1rem;">No data available for this combination.</p>'; return; }
-
-    const systems = data.systems;
-    const n = ALL_TYPES.length;
-    const SYS_W = 130;
-    const CELL_W = 14;
-    const CELL_H = 18;
-
-    let html = '<div class="heatmap-wrap">';
-
-    // Category header row
-    html += `<div class="heatmap-cat-header-row"><div style="width:${SYS_W}px;flex-shrink:0;"></div>`;
-    for (const cat of CAT_SPANS) {
-      const catW = (cat.end - cat.start + 1) * CELL_W;
-      html += `<div class="heatmap-cat-header" style="width:${catW}px;margin-left:${cat.start===0?0:0}px;">${cat.label}</div>`;
-    }
-    html += '</div>';
-
-    // Type label row
-    html += `<div class="heatmap-type-label-wrap"><div style="width:${SYS_W}px;flex-shrink:0;"></div>`;
-    for (let i = 0; i < n; i++) {
-      const isCatStart = CAT_SPANS.some(c => c.start === i && i > 0);
-      const style = `width:${CELL_W}px;${isCatStart ? 'border-left:2px solid #9ca3af;' : ''}`;
-      html += `<div class="heatmap-type-label" style="${style}">${ALL_TYPES[i].replace(/_/g,' ')}</div>`;
-    }
-    html += '</div>';
-
-    // Data rows
-    for (const sys of systems) {
-      const row = data.matrix[sys];
-      html += `<div class="heatmap-row">`;
-      html += `<div class="heatmap-sys-name">${sys}</div>`;
-      for (let i = 0; i < n; i++) {
-        const v = row[i];
-        const bg = peToColor(v);
-        const tip = v !== null ? `${ALL_TYPES[i].replace(/_/g,' ')}: ${v.toFixed(1)}` : `${ALL_TYPES[i].replace(/_/g,' ')}: —`;
-        const isCatStart = CAT_SPANS.some(c => c.start === i && i > 0);
-        const border = isCatStart ? 'border-left:2px solid #9ca3af;' : '';
-        html += `<div class="heatmap-cell" style="background:${bg};width:${CELL_W}px;height:${CELL_H}px;${border}" data-tip="${tip}"></div>`;
-      }
-      html += `</div>`;
-    }
-
-    html += '</div>';
-    container.innerHTML = html;
-  }
-
-  let hmLang = 'en', hmMode = 'tag';
-
-  document.addEventListener('DOMContentLoaded', function() {
-    renderHeatmap(hmLang, hmMode);
-
-    document.querySelectorAll('.heatmap-btn[data-lang]').forEach(btn => {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.heatmap-btn[data-lang]').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        hmLang = this.dataset.lang;
-        renderHeatmap(hmLang, hmMode);
-      });
-    });
-    document.querySelectorAll('.heatmap-btn[data-mode]').forEach(btn => {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.heatmap-btn[data-mode]').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        hmMode = this.dataset.mode;
-        renderHeatmap(hmLang, hmMode);
-      });
-    });
-  });
-})();
+function showHeatmap(lang) {
+  document.getElementById('hm-en').style.display = lang === 'en' ? 'block' : 'none';
+  document.getElementById('hm-zh').style.display = lang === 'zh' ? 'block' : 'none';
+  document.getElementById('hm-btn-en').style.background = lang === 'en' ? '#1d4ed8' : '#f9fafb';
+  document.getElementById('hm-btn-en').style.color = lang === 'en' ? '#fff' : '#374151';
+  document.getElementById('hm-btn-zh').style.background = lang === 'zh' ? '#1d4ed8' : '#f9fafb';
+  document.getElementById('hm-btn-zh').style.color = lang === 'zh' ? '#fff' : '#374151';
+}
 </script>
 
 <!-- ── Citation ───────────────────────────────────────────────────────────── -->
