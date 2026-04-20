@@ -2,6 +2,54 @@
 Non-verbal vocalizations (NVVs) like laughter, sighs, and sobs are essential for human-like speech, yet existing TTS benchmarks rarely test whether systems can generate the intended NVV, place it correctly, place it correctly, and keep it salient without harming speech quality. We present **Non-verbal Vocalization 
 Benchmark (NVBench)**, a bilingual (English/Chinese) benchmark that evaluates speech synthesis with NVVs. NVBench pairs a unified 45-type taxonomy with a curated bilingual set and introduces a multi-axis protocol that disentangles general speech naturalness and quality from NVV-specific controllability, placement, and salience. We benchmark 15 representative TTS systems using objective metrics, listening tests, and an LLM-based multi-rater evaluation. The results reveal that NVV controllability often decouples from overall quality; structured tags can help but inventories are sparse, while low-SNR oral cues and long-duration affective NVVs remain persistent bottlenecks. NVBench enables fair cross-system comparison across diverse control interfaces under a unified, standardized framework.
 
+## 45-type NVV taxonomy of NVBench
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>NVV Types</th>
+      <th align="center">Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Respiratory</b></td>
+      <td><code>breath</code>, <code>inhale</code>, <code>exhale</code>, <code>quick breath</code>, <code>sigh</code>, <code>gasp</code>, <code>panting</code>, <code>wheezing</code>, <code>snore</code>, <code>yawn</code></td>
+      <td align="center">10</td>
+    </tr>
+    <tr>
+      <td><b>Throat / Physiological</b></td>
+      <td><code>cough</code>, <code>sneeze</code>, <code>throat clearing</code>, <code>hiccup</code>, <code>sniff</code>, <code>sniffle</code>, <code>snort</code></td>
+      <td align="center">7</td>
+    </tr>
+    <tr>
+      <td><b>Laughter Spectrum</b></td>
+      <td><code>chuckle</code>, <code>giggle</code>, <code>laugh</code>, <code>laugh harder</code>, <code>start laughing</code>, <code>stifled laugh</code>, <code>burst of laughter</code></td>
+      <td align="center">7</td>
+    </tr>
+    <tr>
+      <td><b>Crying Spectrum</b></td>
+      <td><code>crying</code>, <code>sobbing</code>, <code>crying loudly</code>, <code>wail</code>, <code>whimper</code></td>
+      <td align="center">5</td>
+    </tr>
+    <tr>
+      <td><b>Emotional Vocalizations</b></td>
+      <td><code>hum</code>, <code>humming</code>, <code>groan</code>, <code>moan</code>, <code>grunt</code>, <code>mumble</code>, <code>exclamation (ah, oh, hmm)</code></td>
+      <td align="center">7</td>
+    </tr>
+    <tr>
+      <td><b>Oral / Miscellaneous</b></td>
+      <td><code>lipsmack</code>, <code>gulp</code>, <code>swallow</code>, <code>burp</code>, <code>tsk</code>, <code>sss</code>, <code>clucking</code>, <code>hissing</code>, <code>whisper</code></td>
+      <td align="center">9</td>
+    </tr>
+    <tr>
+      <td><b>Total</b></td>
+      <td></td>
+      <td align="center"><b>45</b></td>
+    </tr>
+  </tbody>
+</table>
+
 ## NVV Inventories of Representative Tag-Based TTS Systems and Datasets
 
 NVV inventories of representative tag-based TTS systems and datasets, as well as two recent benchmarks. §: commercial TTS system. †: tags with higher intensity, loudness, or speed. Tags that do not correspond to non-verbal vocalizations (e.g., non-vocal sound-effect tags like `[clapping]` or purely stylistic tags like `[sarcastic]`) are excluded from systems.
