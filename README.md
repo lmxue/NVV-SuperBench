@@ -4,7 +4,7 @@ Benchmark (NVBench)**, a bilingual (English/Chinese) benchmark that evaluates sp
 
 ## NVV Inventories of Representative Tag-Based TTS Systems and Datasets
 
-NVV inventories of representative tag-based TTS systems and datasets. §: commercial TTS system. †: tags with higher intensity, loudness, or speed. Tags that do not correspond to non-verbal vocalizations (e.g., non-vocal sound-effect tags like `[clapping]` or purely stylistic tags like `[sarcastic]`) are excluded from systems.
+NVV inventories of representative tag-based TTS systems and datasets, as well as two recent benchmarks. §: commercial TTS system. †: tags with higher intensity, loudness, or speed. Tags that do not correspond to non-verbal vocalizations (e.g., non-vocal sound-effect tags like `[clapping]` or purely stylistic tags like `[sarcastic]`) are excluded from systems.
 
 <table border="1" cellpadding="6" cellspacing="0">
   <thead>
@@ -103,5 +103,23 @@ NVV inventories of representative tag-based TTS systems and datasets. §: commer
       <td align="center">17</td>
       <td align="center">ZH</td>
     </tr>
+  <tr>
+    <td align="center" rowspan="2"><b>Benchmark</b></td>
+    <td>WESR</td>
+    <td><code>laugh</code>, <code>chuckle</code>, <code>giggle</code>, <code>cough</code>, <code>clear throat</code>, <code>whisper</code>, <code>cry</code>, <code>sob</code>, <code>inhale</code>, <code>pant</code>, <code>breath</code>, <code>sigh</code>, <code>exhale</code>, <code>shout</code>, <code>scream</code>, <code>roar</code></td>
+    <td align="center">16</td>
+    <td align="center">EN, ZH</td>
+  </tr>
+<tr>
+  <td>NV-Bench</td>
+  <td><code>breath</code>, <code>cough</code>, <code>sigh</code>, <code>laughter</code></td>
+  <td align="center">4</td>
+  <td align="center">EN, ZH</td>
+</tr>
   </tbody>
 </table>
+
+
+![Word cloud of NVV tags across surveyed TTS systems and datasets](figs/nvv_word_cloud.png)
+
+*Word cloud of NVV tags across surveyed TTS systems and datasets. Tag size reflects frequency of occurrence. Laughter-related vocalizations dominate current inventories, while physiological sounds (e.g., snore, hiccup) and subtle oral cues (e.g., lipsmack, gulp) remain underrepresented.*
