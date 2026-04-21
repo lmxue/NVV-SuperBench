@@ -51,8 +51,13 @@ Benchmark (NVBench)**, a bilingual (English/Chinese) benchmark that evaluates sp
 </table>
 
 ## NVV Inventories of Representative Tag-Based TTS Systems and Datasets
+Word cloud of NVV tags across surveyed TTS systems and datasets. Tag size reflects frequency of occurrence. Laughter-related vocalizations dominate current inventories, while physiological sounds (e.g., snore, hiccup) and subtle oral cues (e.g., lipsmack, gulp) remain underrepresented.
+
+![Word cloud of NVV tags across surveyed TTS systems and datasets](figs/nvv_word_cloud.png)
+
 
 NVV inventories of representative tag-based TTS systems and datasets, as well as two recent benchmarks. §: commercial TTS system. †: tags with higher intensity, loudness, or speed. Tags that do not correspond to non-verbal vocalizations (e.g., non-vocal sound-effect tags like `[clapping]` or purely stylistic tags like `[sarcastic]`) are excluded from systems.
+
 
 <table border="1" cellpadding="6" cellspacing="0">
   <thead>
@@ -167,7 +172,3 @@ NVV inventories of representative tag-based TTS systems and datasets, as well as
   </tbody>
 </table>
 
-
-![Word cloud of NVV tags across surveyed TTS systems and datasets](figs/nvv_word_cloud.png)
-
-*Word cloud of NVV tags across surveyed TTS systems and datasets. Tag size reflects frequency of occurrence. Laughter-related vocalizations dominate current inventories, while physiological sounds (e.g., snore, hiccup) and subtle oral cues (e.g., lipsmack, gulp) remain underrepresented.*
