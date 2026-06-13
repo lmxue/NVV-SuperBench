@@ -1,8 +1,7 @@
-# NVBench: A Benchmark for Speech Synthesis with Non-Verbal Vocalizations
-Non-verbal vocalizations (NVVs) like laughter, sighs, and sobs are essential for human-like speech, yet existing TTS benchmarks rarely test whether systems can generate the intended NVV, place it correctly, place it correctly, and keep it salient without harming speech quality. We present **Non-verbal Vocalization 
-Benchmark (NVBench)**, a bilingual (English/Chinese) benchmark that evaluates speech synthesis with NVVs. NVBench pairs a unified 45-type taxonomy with a curated bilingual set and introduces a multi-axis protocol that disentangles general speech naturalness and quality from NVV-specific controllability, placement, and salience. We benchmark 15 representative TTS systems using objective metrics, listening tests, and an LLM-based multi-rater evaluation. The results reveal that NVV controllability often decouples from overall quality; structured tags can help but inventories are sparse, while low-SNR oral cues and long-duration affective NVVs remain persistent bottlenecks. NVBench enables fair cross-system comparison across diverse control interfaces under a unified, standardized framework.
+# NVV-SuperBench: Beyond Words, Beyond Quality—Benchmarking Nonverbal Vocalizations in Speech Generation
+Nonverbal vocalizations (NVVs) such as laughing, sighing, and sobbing are essential for human-like speech, yet standardized evaluation remains limited in jointly assessing whether systems can generate the intended NVVs, place them correctly, and keep them salient without harming speech. We present **NVV-SuperBench**, a bilingual (English/Chinese) benchmark that evaluates speech with nonverbal vocalizations (NVVs). NVV-SuperBench pairs a unified 45-type taxonomy with a curated bilingual dataset and introduces a multi-axis protocol that goes beyond conventional speech-quality assessment by explicitly evaluating NVV-specific controllability, temporal placement, and perceptual salience. We benchmark 15 speech generation systems using objective metrics, human listening tests, and LLM-based multi-rater evaluation. Results reveal that NVV controllability often decouples from speech quality, while low-SNR oral cues and long-duration affective NVVs remain persistent bottlenecks. NVV-SuperBench enables fair cross-system comparison across diverse control interfaces under a unified, standardized framework.
 
-## 45-type NVV taxonomy of NVBench
+## 45-type NVV taxonomy of NVV-SuperBench
 <table border="1" cellpadding="6" cellspacing="0">
   <thead>
     <tr>
@@ -50,7 +49,7 @@ Benchmark (NVBench)**, a bilingual (English/Chinese) benchmark that evaluates sp
   </tbody>
 </table>
 
-## NVV Inventories of Representative Tag-Based TTS Systems and Datasets
+## NVV Inventories of Representative Datasets and Tag-based Speech Generation Systems 
 Word cloud of NVV tags across surveyed TTS systems and datasets. Tag size reflects frequency of occurrence. Laughter-related vocalizations dominate current inventories, while physiological sounds (e.g., snore, hiccup) and subtle oral cues (e.g., lipsmack, gulp) remain underrepresented.
 
 ![Word cloud of NVV tags across surveyed TTS systems and datasets](figs/nvv_word_cloud.png)
