@@ -57,7 +57,7 @@ Nonverbal vocalizations (NVVs) such as laughing, sighing, and sobbing are essent
 
 This repository hosts the **45-type bilingual NVV evaluation set** and the **evaluation toolkit** used in NVV-SuperBench.
 
-### Dataset (`dataset/`)
+### Dataset 
 
 The `dataset/` directory contains the curated 45-type bilingual NVV evaluation set described in the paper: 2,250 English (`nvbench_data_en.json`) and 2,250 Chinese (`nvbench_data_zh.json`) instances, with balanced per-type coverage (45 NVV types × 50 instances per language). Each item follows a unified schema:
 
@@ -69,7 +69,7 @@ The `dataset/` directory contains the curated 45-type bilingual NVV evaluation s
 | `caption_with_nvb` | Natural-language caption describing the speaker, style, and the NVV (prompt-based control) |
 | `non_verbal_events` | Ground-truth NVV type(s) for this sample |
 
-### Evaluation (`evaluation/`)
+### Evaluation 
 
 The `evaluation/` directory provides the scripts used for the multi-axis evaluation protocol:
 
