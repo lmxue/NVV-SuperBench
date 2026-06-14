@@ -167,12 +167,20 @@
     }
     .contributions {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       margin-bottom: 2.5rem;
       text-align: left;
     }
+    @media (max-width: 980px) {
+      .contributions { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .contributions { grid-template-columns: 1fr; }
+    }
     .contribution-card {
+      display: flex;
+      flex-direction: column;
       background: rgba(255,255,255,.08);
       border: 1px solid rgba(255,255,255,.14);
       border-radius: var(--radius-lg);
