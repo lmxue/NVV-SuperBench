@@ -209,9 +209,9 @@ NVV inventories of representative tag-based systems and datasets, as well as two
 
 ```bibtex
 @article{xue2026nvvsuperbench,
-  title         = {{NVV-SuperBench}: Beyond Words, Beyond Quality---Benchmarking Nonverbal Vocalizations in Speech Generation},
-  author        = {Xue, Liumeng and Bian, Weizhen and Pan, Jiahao and Wu, Wenxuan and Ren, Yilin and Kang, Boyi and Hu, Jingbin and Ma, Ziyang and Wang, Shuai and Qian, Xinyuan and Lee, Hung-yi and Guo, Yike},
-  journal       = {arXiv preprint arXiv:2604.16211},
-  year          = {2026}
+  title = {{NVV-SuperBench}: Beyond Words, Beyond Quality---Benchmarking Nonverbal Vocalizations in Speech Generation},
+  author = {Xue, Liumeng and Bian, Weizhen and Pan, Jiahao and Wu, Wenxuan and Ren, Yilin and Kang, Boyi and Hu, Jingbin and Ma, Ziyang and Wang, Shuai and Qian, Xinyuan and Lee, Hung-yi and Guo, Yike},
+  journal = {arXiv preprint arXiv:2604.16211},
+  year = {2026}
 }
 ```
